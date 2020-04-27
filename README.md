@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/coverallsapp/coveralls-demo-ruby/badge.svg?branch=travis-ci)](https://coveralls.io/github/coverallsapp/coveralls-demo-ruby?branch=travis-ci)
+
 # coveralls-ruby-demo
 
 [Coveralls](https://coveralls.io/) demo project, using:
