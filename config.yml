@@ -2,12 +2,17 @@
 version: 2.1
 # Use a package of configuration called an orb.
 orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
-# Orchestrate or schedule a set of jobs
+  ruby: circleci/ruby@1.0
+jobs:
+  build:
+    docker:
+      - image: cimg/ruby:2.6.5-node
+    steps:
+      - checkout
+      - ruby/install-deps
+      - ruby/rspec-test
+
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
-      - welcome/run
+  build_and_test:
+    jobs: 
+	- build
